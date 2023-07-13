@@ -4,7 +4,7 @@
  *
  * description: prints with proper grammar, but the outcome is a piece of art
  *
- * return: always0
+ * Return: always0
  *
  */
 int main(void)
