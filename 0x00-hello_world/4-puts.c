@@ -3,7 +3,9 @@
  *
  * main - prints
  *
- * Return: always 0.
+ * description: prints
+ *
+ * Return: always0
  *
  */
 int main(void)
