@@ -4,7 +4,7 @@
  *
  * description: prints
  *
- * Return: always0
+ * Return: always 0 (success)
  *
  */
 int main(void)
