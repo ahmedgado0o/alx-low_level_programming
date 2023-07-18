@@ -10,8 +10,5 @@
  */
 int add(int y, int x)
 {
-	int n;
-
-	n = y + x;
-	return (n);
+	return (x + y);
 }
