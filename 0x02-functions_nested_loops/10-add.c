@@ -2,11 +2,10 @@
 /**
  * add - adds
  *
- * @n:sum two num
  * @x:int in1
  * @y:int in2
  *
- * Return: n
+ * Return: x + y
  */
 int add(int y, int x)
 {
