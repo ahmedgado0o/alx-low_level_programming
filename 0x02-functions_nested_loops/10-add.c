@@ -3,11 +3,15 @@
  * add - adds
  *
  * @n: sum
+ * @x:int in1
+ * @y:int in2
  *
  * Return: n
  */
 int add(int y, int x)
 {
-	x = y + x;
-	return (x);
+	int n;
+
+	n = y + x;
+	return (n);
 }
