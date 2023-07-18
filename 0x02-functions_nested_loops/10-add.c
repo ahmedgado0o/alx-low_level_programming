@@ -2,7 +2,7 @@
 /**
  * add - adds
  *
- * @n: sum
+ * @n:sum two num
  * @x:int in1
  * @y:int in2
  *
