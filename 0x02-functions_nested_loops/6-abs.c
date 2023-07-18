@@ -2,7 +2,9 @@
 /**
  * _abs - computes
  *
- * Return:
+ * @n: int in
+ *
+ * Return: n
  */
 int _abs(int n)
 {
