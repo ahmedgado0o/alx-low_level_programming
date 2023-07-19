@@ -12,10 +12,21 @@ void print_to_98(int n)
 	int x;
 
 	if (n > 98)
-		for (x = n; x > 98; x--)
+	{
+		for (x = n; x >= 98; x--)
+		{
 			printf("%d, ", x);
-	else
-		for (x = n; x < 98; x++)
+		}
+	}
+	else if (n < 98)
+	{
+		for (x = n; x <= 98; x++)
+		{
 			printf("%d, ", x);
-	printf("98\n");
+		}
+	}
+	else 
+	{
+		printf("98\n");
+	}
 }
