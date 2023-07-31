@@ -1,5 +1,9 @@
 #include <stddef.h>
-
+/**
+ * *_memset - fills memory
+ * @i: unsigned int
+ * Return: s
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
