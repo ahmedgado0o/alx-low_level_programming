@@ -1,7 +1,6 @@
 #include <stddef.h>
 /**
  * *_memset - fills memory
- * @i: unsigned int
  * @s: char
  * @b: char
  * @n: unsigned int
