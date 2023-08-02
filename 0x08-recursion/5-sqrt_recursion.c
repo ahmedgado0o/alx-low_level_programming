@@ -1,28 +1,46 @@
 #include "main.h"
 /**
- * _sqrt_recursion - returns square
- * @n: int in
- * Return: n or -1
+ * _sqrt_recursion_helper - Helper function to find
+ * @n: The number to find the square root for.
+ * @start: The starting value for the binary search range.
+ * @end: The ending value for the binary search range.
+ *
+ * Return: The square root of n, or -1
+ */
+int _sqrt_recursion_helper(int n, int start, int end)
+{
+	int mid;
+	int square;
+
+	if (start > end)
+	{
+		return (-1);
+	}
+	mid = start + (end - start) / 2;
+	square = mid * mid;
+	if (square == n)
+	{
+		return (mid);
+	}
+	if (square < n)
+	{
+		return (_sqrt_recursion_helper(n, mid + 1, end));
+	}
+	return (_sqrt_recursion_helper(n, start, mid - 1));
+	
+}
+
+/**
+ * _sqrt_recursion - Calculate the natural square root of a number.
+ * @n: The number to find the square root for.
+ *
+ * Return: The natural square root of n, or -1
  */
 int _sqrt_recursion(int n)
 {
-	int g;
-
 	if (n < 0)
 	{
 		return (-1);
 	}
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	g = _sqrt_recursion(n / 4);
-	if (g * g > n)
-	{
-		return (g - 1);
-	}
-	else
-	{
-		return (g);
-	}
+	return (_sqrt_recursion_helper(n, 1, n));
 }
