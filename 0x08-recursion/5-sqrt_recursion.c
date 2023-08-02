@@ -23,5 +23,5 @@ int _sqrt_recursion(int n)
 	{
 		return (guess);
 	}
-	return (_sqrt_recursion(improved_guess));
+	return (improved_guess);
 }
