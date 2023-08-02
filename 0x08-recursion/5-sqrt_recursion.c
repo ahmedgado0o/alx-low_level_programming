@@ -6,11 +6,8 @@
  */
 int _sqrt_recursion(int n)
 {
-	int guess;
-	int improved_guess;
+	int g;
 
-	guess = n / 2;
-	improved_guess = (guess + n / guess) / 2;
 	if (n < 0)
 	{
 		return (-1);
@@ -19,9 +16,13 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
-	if (improved_guess == guess)
+	g = _sqrt_recursion(n / 4);
+	if (g * g > n)
 	{
-		return (guess);
+		return (g - 1);
 	}
-	return (improved_guess);
+	else
+	{
+		return (g);
+	}
 }
