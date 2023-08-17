@@ -12,11 +12,9 @@ void print_all(const char * const format, ...)
 	int i;
 	char c;
 	char *s;
-	float f;
-	int num;
 
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i])
 	{
 		if (format[i] == 'c')
 		{
@@ -25,28 +23,24 @@ void print_all(const char * const format, ...)
 		}
 		else if (format[i] == 'i')
 		{
-			num = va_arg(args, int);
-			printf("%d", num);
+			printf("%d", va_arg(args, int));
 		}
 		else if (format[i] == 'f')
 		{
-			f = va_arg(args, double);
-			printf("%f", f);
+			printf("%f", (float) va_arg(args, double));
 		}
 		else if (format[i] == 's')
 		{
 			s = va_arg(args, char *);
 			if (s == NULL)
 			{
-				printf("(nil)");
-			}
-			else
-			{
+				s = "(nil)";
 				printf("%s", s);
 			}
+			i++;
 		}
-		i++;
 	}
 	va_end(args);
 	printf("\n");
 }
+
